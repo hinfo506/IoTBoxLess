@@ -17,7 +17,7 @@
  
 ##fixed parameters
 #iotbox
-OS_USER="boleteria"
+OS_USER="root"
 OE_USER="iotbox"
 OE_HOME="/$OE_USER"
 OE_HOME_EXT="/$OE_USER/${OE_USER}-server"
@@ -100,8 +100,8 @@ sudo npm install -g rtlcss
 ###
 ###echo -e "\n---- Create USB users ----"
 sudo groupadd usbusers
-sudo adduser boleteria usbusers
-sudo usermod -a -G usbusers boleteria
+sudo adduser $OS_USER usbusers
+sudo usermod -a -G usbusers $OS_USER
 
 echo -e "* Create udev USB access rules file"
 cat <<EOF > /etc/udev/rules.d/99-usbusers.rules
