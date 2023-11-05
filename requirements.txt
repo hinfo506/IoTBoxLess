@@ -1,4 +1,8 @@
-PyPDF2
+PyPDF
+pillow
+idna
+python-dateutil
+requests
 passlib
 babel
 markupsafe
